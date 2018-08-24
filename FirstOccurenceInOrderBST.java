@@ -1,6 +1,4 @@
-/* qs 14.2 variant - uses iterative inorder traversal with stack
-* time complexity is O(n) as we need to visit every single node
-* in the worst case */
+/* qs 14.2 variant - uses iterative inorder traversal with stack */
 
 public Node firstOccurenceInOrderBST(Node node, int toFind)
 {
