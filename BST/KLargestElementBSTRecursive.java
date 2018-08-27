@@ -13,13 +13,13 @@ public void recursiveHelper(Node node, int k, List<Integer> list)
 {
 	if(node != null && list.size < k)
 	{
-		recursiveHelper(node.right);
+		recursiveHelper(node.right, k, list);
 		if(list.size < k)
 		{
 			list.add(node);
 		}
 
-		recursiveHelper(node.left);
+		recursiveHelper(node.left, k, list);
 	}
 }
 
