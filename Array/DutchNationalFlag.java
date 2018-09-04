@@ -5,9 +5,9 @@ public class DutchNationalFlag
 {
 	public static void main(String[] args)
 	{
-		int[] arr = new int[]{1,2,3,10,2,3,15,4,5,6,10};
+		int[] arr = new int[]{2,1,3,4,1,5,0,1,3};
 
-		partition(arr, 3);
+		partition(arr, 0);
 
 		for(int i = 0; i < arr.length; i++)
 		{
