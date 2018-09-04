@@ -6,7 +6,7 @@ public class EvenEntriesFirst
 {
 	public static void main(String[] args)
 	{
-		int[] array = new int[]{3,8,2,1,1,4,1,3,4,10,1,2};
+		int[] array = new int[]{2,5,4,3,10,2,4,3,5,7,1,3,2,4,20};
 
 		reorderArray(array);
 
@@ -16,7 +16,8 @@ public class EvenEntriesFirst
 		}		
 	}
 
-	public static void reorderArray(int[] array)
+	// with this method {2,2,2,1,2,2,2,2} requires multiple swaps of 1 with 2 all the way to the end
+	/*public static void reorderArray(int[] array)
 	{
 		int i = 0;
 
@@ -32,6 +33,28 @@ public class EvenEntriesFirst
 			else if(array[i] % 2 == 0)
 			{
 				i = j;
+			}
+		}
+	}*/
+
+	// solution from EPI
+	public static void reorderArray(int[] array)
+	{
+		int start = 0;
+		int end = array.length - 1;
+
+		while(start < end)
+		{
+			if(array[start] % 2 == 0)
+			{
+				start++;
+			}
+			else
+			{
+				int temp = array[end];
+				array[end] = array[start];
+				array[start] = temp;
+				end--;
 			}
 		}
 	}
