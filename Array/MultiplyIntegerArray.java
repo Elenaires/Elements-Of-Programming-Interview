@@ -1,5 +1,16 @@
 /* qs 5.3 */
 
+/* for 123 * 987
+* instead of summming up 123 * 7 + 8 * 123 * 10 etc at the end..
+* we incrementally add the terms to save space
+* otherwise, 123 * 7 = 861 (store somewhere)
+* 8 * 123 * 10 = 9840 (store somewhere) 
+* so on and so forth, and we have to loop through 
+* those digits from back to front to sum them all up
+* to avoid interger overflow
+* time consuming and additional space needed
+*/
+ 
 import java.util.*;
 
 public class MultiplyIntegerArray
