@@ -36,7 +36,7 @@ public class TestForCyclicityWithoutExtraSpace
 		int cycleLength = 0;
 
 		// return cycleHead is cycle exist
-		// otherwise return original head
+		// otherwise return null
 		while(fast != null && fast.next != null)
 		{
 			slow = slow.next;
@@ -50,7 +50,7 @@ public class TestForCyclicityWithoutExtraSpace
 			}
 		}
 
-		return head;
+		return null;
 	}
 
 	public static Node findCycleHead(Node head, Node slow, Node fast)

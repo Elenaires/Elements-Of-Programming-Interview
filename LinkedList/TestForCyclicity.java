@@ -42,7 +42,7 @@ public class TestForCyclicity
 			current = current.next;
 		}
 		
-		Node result = (current != null) ? current : head;
+		Node result = (current != null) ? current : null;
 
 		return result;
 	}
