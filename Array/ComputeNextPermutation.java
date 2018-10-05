@@ -70,7 +70,7 @@ public class ComputeNextPermutation
 			list.set(i, list.get(j));
 			list.set(j, temp);
 
-			// reorder suffix to obtain smallest permutation
+			// reverse suffix to obtain smallest permutation
 			int start = i + 1;
 			int end = list.size() - 1;
 		
