@@ -7,7 +7,7 @@
 
 public class OverlappingLists
 {
-	public static class ListNode
+	/*public static class ListNode
 	{
 		int val;
 		ListNode next;
@@ -16,7 +16,7 @@ public class OverlappingLists
 			val = x;
 			next = null;
 		}
-	}
+	}*/
 
 	public static void main(String[] args)
 	{
