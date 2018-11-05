@@ -26,6 +26,12 @@ public class CyclicRightShift
 
 	public static ListNode rightShift(ListNode root, int k)
 	{
+		// if root is null, return null
+		if(root == null)
+		{
+			return root;
+		}
+
 		// find length of the list
 		int length = 1;
 		ListNode tail = root;
@@ -34,9 +40,15 @@ public class CyclicRightShift
 			tail = tail.next;
 			length++;
 		}
-
+				
 		// this is a check - since k can be greater than length
 		k = k % length;
+	
+		// if k is 0 then no shift is needed
+		if(k == 0)
+		{
+			return root;
+		}	
 
 		// connect tail to the root
 		tail.next = root;
